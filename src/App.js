@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Box from './components/box'
+import Dropdown from './components/dropdown';
 
 
 
@@ -110,7 +111,7 @@ data= [
   render(){
   return (
     <div className="App">
-      <Box 
+      <Dropdown
       data = {this.data}/>
       
     </div>
