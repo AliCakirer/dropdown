@@ -1,24 +1,17 @@
-.City{
-    float: left;
-   
-
-}
-.District{
-    float: left;
-}
-.Neighbor{
-    float: left;
-}
-.elements{
-    float: left;
-    margin-top: 40px;
-}
-
 .box-row {
-    width: 600px;
+    width: 700px;
 }
 
-.dropdown-input {
-    width: 200px;
+.search-input-group {
+    width: 700px;
+}
+
+.search-input {
+    padding: .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .2rem;
+    width: 100%;
 }
 
