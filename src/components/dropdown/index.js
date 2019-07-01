@@ -52,65 +52,69 @@ class Dropdown extends Component {
     render() {
         return (
             <div>
-                <div className="City">
-                <input className="inputCity" type="text" placeholder="Şehir seçiniz :" onClick={this.dropDown}
-                value={this.state.selectedCity !== null
-                ?this.state.selectedCity.name
-                :null
-                }
-                />
+                <div className="row">
+                    <div className="col-sm-12">
+                        <div className="input-group input-group-sm search-input-group">
+                            {/* City Input */}
+                            <input className="inputCity dropdown-input" type="text" placeholder="Şehir seçiniz :" onClick={this.dropDown}
+                            value={this.state.selectedCity !== null
+                            ?this.state.selectedCity.name
+                            :null
+                            }
+                            />
 
-                {
-                    this.state.showItems===true
-                ?<Box
-                    handleClick={this.selectCity}
-                    data={this.state.data}
-                />
-                
-                :null
-                }
+                            {/* District Input */}
+                            <input className="inputDistrict dropdown-input" type="text" placeholder="İlçe seçiniz :" placeholder="İlçe seçiniz :"
+                            value={this.state.selectedDistrict !== null
+                            ?this.state.selectedDistrict.name
+                            :null
+                            }
+                            />
+                            
+                            {/* Neighbor Input */}
+                            <input className="inputNeighbor dropdown-input" type="text"  placeholder="Mahalle seçiniz :"
+
+                            value={this.state.selectedNeighbor !== null
+                            ?this.state.selectedNeighbor.name
+                            :null
+                            }
+                            />
+                        </div>   
+                    </div>
                 </div>
-
-                <div className="District">
-
-             
-                     <input className="inputDistrict" type="text" placeholder="Şehir seçiniz :" placeholder="İlçe seçiniz :"
-                      value={this.state.selectedDistrict !== null
-                        ?this.state.selectedDistrict.name
-                        :null
-                        }
-                     
-                     />
-                {this.state.selectedCity !== null && this.state.showItems===true
-              
                     
-                    ?<Box
-                        handleClick={this.selectDistrict}
-                        data={this.state.selectedCity.subElement}
-
-                    />
-                :null
-                }
-                   </div>
-                
-                <div className="Neighbor">
-              <input className="inputNeighbor" type="text"  placeholder="Mahalle seçiniz :"
-
-                      value={this.state.selectedNeighbor !== null
-                        ?this.state.selectedNeighbor.name
+                <div className="row box-row">
+                    <div className="col-4">
+                        {
+                            this.state.showItems===true
+                        ?<Box
+                            handleClick={this.selectCity}
+                            data={this.state.data}
+                        />
+                        
                         :null
                         }
-                        />
+                    </div>
+                    <div className="col-4">
+                        {this.state.selectedCity !== null && this.state.showItems===true
+                            ?<Box
+                                handleClick={this.selectDistrict}
+                                data={this.state.selectedCity.subElement}
 
-                    {this.state.selectedDistrict !== null && this.state.showItems===true
-                    ?<Box
+                            />
+                        :null
+                        }
+                    </div>
+                    <div className="col-4">
+                        {this.state.selectedDistrict !== null && this.state.showItems===true
+                        ?<Box
                         handleClick={this.selectNeighbor}
                         data={this.state.selectedDistrict.subElement}
                         />
                         :null
-                }
-                </div>
-                   
+                        }
+                    </div>
+                </div> 
             </div>
 
         )
