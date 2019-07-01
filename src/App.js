@@ -111,10 +111,15 @@ data= [
   render(){
   return (
     <div className="App">
-      <Dropdown
-      data = {this.data}/>
-      
+        <div className="container fluid">
+            <div className="row">
+                <div className="col-sm-12">
+                    <Dropdown data = {this.data}/>
+                </div>
+            </div>
+        </div>
     </div>
+
   )
   }
 }
