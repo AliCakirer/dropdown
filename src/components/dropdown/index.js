@@ -58,33 +58,35 @@ class Dropdown extends Component {
         console.log(this.state.selectedCity)
         return (
             <div>
-                <div className="row">
-                    <div className="col-sm-12">
-                        <div className="input-group input-group-sm search-input-group">
-                            {/* City Input */}
-                            <input className="inputCity dropdown-input" type="text" placeholder="Şehir seçiniz :" onClick={this.dropDown}
-                            value={this.state.selectedCity !== null
-                            ?this.state.selectedCity.name
-                            :null
-                            }
-                            />
-                            {/* District Input */}
-                            <input className="inputDistrict dropdown-input" type="text" placeholder="İlçe seçiniz :" placeholder="İlçe seçiniz :"
-                            value={this.state.selectedDistrict !== null
-                            ?this.state.selectedDistrict.name
-                            :null
-                            }
-                            />
-                            
-                            {/* Neighbor Input */}
-                            <input className="inputNeighbor dropdown-input" type="text"  placeholder="Mahalle seçiniz :"
+                <div className="row search-input-group">
+                    <div className="col-4">
+                        {/* City Input */}
+                        <input className="search-input" type="text" placeholder="Şehir seçiniz :" onClick={this.dropDown}
+                        value={this.state.selectedCity !== null
+                        ?this.state.selectedCity.name
+                        :null
+                        }
+                        />
+                    </div>
 
-                            value={this.state.selectedNeighbor !== null
-                            ?this.state.selectedNeighbor.name
-                            :null
-                            }
-                            />
-                        </div>   
+                    <div className="col-4">
+                        {/* District Input */}
+                        <input className="search-input" type="text" placeholder="İlçe seçiniz :" placeholder="İlçe seçiniz :"
+                        value={this.state.selectedDistrict !== null
+                        ?this.state.selectedDistrict.name
+                        :null
+                        }
+                        />
+                    </div>
+
+                    <div className="col-4">
+                        {/* Neighbor Input */}
+                        <input className="search-input" type="text"  placeholder="Mahalle seçiniz :"
+                        value={this.state.selectedNeighbor !== null
+                        ?this.state.selectedNeighbor.name
+                        :null
+                        }
+                        />
                     </div>
                 </div>
                     
