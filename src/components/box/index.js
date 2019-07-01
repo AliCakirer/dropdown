@@ -10,12 +10,14 @@ class Box extends Component {
         );
 
         return (
+
             <div className="elements">
         
             
                {dataList}
              
                 
+
             </div>
         )
     }
