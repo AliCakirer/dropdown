@@ -5,13 +5,17 @@ class Box extends Component {
 
     render() {
         const dataList = this.props.data.map((element) =>
-            <li key={element.name} onClick={this.props.handleClick} value={element} id={element.name}>{element.name}</li>
+            <li key={element.name} onClick={()=>this.props.handleClick(element)} value={element} id={element.name}>{element.name}</li>
 
         );
 
         return (
-            <div>
-                <ul>{dataList}</ul>
+            <div className="elements">
+        
+            
+               {dataList}
+             
+                
             </div>
         )
     }

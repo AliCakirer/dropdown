@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import Box from './components/box'
+
 import Dropdown from './components/dropdown';
 
 
