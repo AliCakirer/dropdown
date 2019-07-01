@@ -1,0 +1,11 @@
+.my-item {
+    background-color: begie;
+}
+
+.my-item:hover {
+    background-color: #e0e0e0;
+}
+
+.active {
+    background-color: #c4c2c2;
+}
